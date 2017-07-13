@@ -189,6 +189,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			top:-21px;
 			left:40px;
 			opacity:0;
+			transition:all .2s;
 		}
 		.code_bottom{
 			text-align:center;
@@ -311,9 +312,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			color:#fff;
 			font-size:13px;
 		}
-		#code:hover {
-			display:none;
-		}
+		
 	</style>
   </head>
   	
@@ -387,7 +386,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    									<input type='submit' value='登录' class='login_button'>
    									<div class='login_bottom'>
    										<a href='' class='taobao_login'>淘宝会员登录</a>
-   										<a href='' class='register'>免费注册</a>
+   										<a href='./alipay/Register.jsp' class='register'>免费注册</a>
   									</div>
    								</form>
    							</div>
@@ -449,6 +448,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  		$('.login_box1').style.display='none';
  		$('.login_box2').style.display='block';
  	}
-  
+  	//----------------
+  	$('#code').onmouseover=function(event){
+  		$('.code').style.opacity=0;
+  		$('.code_right').style.opacity=1;
+  		$('.code_right').style.transform='translate(-32px,0px)';
+  	}
+  	$('#code').onmouseout=function(event){
+  		$('.code').style.opacity=1;
+  		$('.code_right').style.opacity=0;
+  		$('.code_right').style.transform='translate(0px,0px)';
+  	}
   </script>
 </html>
