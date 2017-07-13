@@ -1,3 +1,16 @@
+body {
+	overflow: hidden;
+	margin: 0px;
+}
+
+.main {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: inline-block;
+	background-size: 100% 100%;
+}
+
 .head {
 	position: relative;
 	width: 100%;
@@ -172,7 +185,7 @@ li {
 	top: -21px;
 	left: 40px;
 	opacity: 0;
-	transition:all .2s;
+	transition: all .2s;
 }
 
 .code_bottom {
@@ -316,3 +329,10 @@ input:-webkit-autofill {
 	font-size: 13px;
 }
 
+.iconfont {
+	font-family: "rei";
+	font-style: normal;
+	font-weight: normal;
+	cursor: default;
+	-webkit-font-smoothing: antialiased;
+}

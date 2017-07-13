@@ -17,14 +17,28 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<meta http-equiv="expires" content="0">
 		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 		<meta http-equiv="description" content="This is my page">
-		<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
-
+		<link rel="stylesheet" href="./css/main.css" />
 	</head>
 
 	<body>
-		
+		<div class="main">
+			<div class="head">
+				<div class="head_center">
+					<div class="head_left">
+						<ul >
+							<li >
+								<i class="iconfont"></i>
+							</li>
+							<li ></li>
+						</ul>
+					</div>
+					
+					<div class="head_right">
+						
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 
 </html>
