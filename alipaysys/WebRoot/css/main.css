@@ -58,7 +58,7 @@ li {
 .center_left_logo {
 	height: 40px;
 	width: 114px;
-	background: url('./image/main_logo.png');
+	background: url('../image/main_logo.png');
 	background-size: 114px 40px;
 }
 
@@ -145,7 +145,7 @@ li {
 }
 
 .code {
-	background: url('./image/login_code.png');
+	background: url('../image/login_code.png');
 	background-size: 120px 120px;
 	height: 120px;
 	width: 120px;
@@ -163,7 +163,7 @@ li {
 }
 
 .code_right {
-	background: url('./image/login_code_right.png');
+	background: url('../image/login_code_right.png');
 	background-repeat: no-repeat;
 	background-position: 0 -320px;
 	height: 170px;
@@ -172,6 +172,7 @@ li {
 	top: -21px;
 	left: 40px;
 	opacity: 0;
+	transition:all .2s;
 }
 
 .code_bottom {
@@ -315,6 +316,3 @@ input:-webkit-autofill {
 	font-size: 13px;
 }
 
-#code:hover {
-	display: none;
-}
