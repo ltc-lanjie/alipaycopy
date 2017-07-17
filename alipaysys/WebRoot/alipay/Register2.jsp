@@ -22,7 +22,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-
+	<%
+		new Code().changeCode("D:/zhengyuelai/java/MyEclipse/alipaycopy/alipaysys/WebRoot/image/code.png");
+	%>
 	<style type="text/css">
 		body{
 			margin:0px;
@@ -32,6 +34,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			width:100%;
 			position:relative;
 			display:inline-block;
+		}
+		.register_big_box{
+			height:auto;
+			min-height:500px;
 		}
 	</style>
 	</head>
@@ -91,87 +97,38 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   					<div class='rotate_font2 gold'>成功</div>
   				</div>
   			</div>
-  			<div class='center_select'>
-  				<div class='select1'></div>
-  				<div class='select2'></div>
-  			</div>
+  			
   			<div class='register_big_box'>
-  				<div class='bg_select'></div>
-  				<div class='register_center_box'>
-  					<div class='register_line1'>国籍/地区
-  						<div class='country_box'>中国</div>
-  						<div class='country_select'></div>
-  					</div>
-  					<div class='register_line2'>手机号
-  						<select class='select_tel_box'>
-  							<option>86</option>
-  							<input type='text'placeholder='请输入你的手机号码' name='tel' class='tel_text' required>
-  						</select>
-  					</div>
-  					<div class='register_line3'>
-  						验证码
-  						<input type='text' class='i_code' name='i-code' placeholder='请输入右侧验证码' required>
-  						<div class='code_pic'>
-  							<img src="./CodeServlet" id="code"/>
-  						</div>
-  					</div>
-  					<div class='register_line4'>
-  						<input type='checkbox' class='check_box'>同意《
-  						<a href='#'>支付宝服务协议</a> 》
-  					</div>
-  					<div class='register_line5'>
-  						<input type='submit' value='下一步' class='submit_register1'>
-  					</div>
-  					<div class='register_line6'>
-  						<a href='#'>使用邮箱注册</a>
-  					</div>
+  				<div class='warning_box'>
+  					<i class='p_logo'></i>
+  					<p class='p_size'>为了给你提供更好的支付和金融服务，你需要填写的身份信息享受会员保障服务。</p>
+  					<p class='p_size'>身份信息一经录入不可更改，隐私信息未经本人许可严格保密。</p>
   				</div>
-  			</div>
+  				<div class='register2_line1'>
+  					<label class='user1'>支付宝账户名</label>
+  					<strong class='user2'>914694648@qq.com</strong>
+  				</div>
+  				<div class='title_line1'>
+  					<strong class='strong_f1'>设置登录密码</strong>
+  					<label class='strong_f2'>登录时需验证，保护账户信息</label>
+  				</div>
+  				<div class='title_line2'>
+  					<div class='title_line2_pwd'>
+  						<input type='password' class='pwd1' required>
+  					</div>
+  					<label class='pwd_text'>登录密码</label>
+  				</div>
+  				<div class='title_line3'>
+  					<div class='title_line2_pwd'>
+  						<input type='password' class='pwd1' required>
+  					</div>
+  					<label class='pwd_text'>再输入一次</label>
+  				</div>
   		 </div>
-  		<div class='bottom'>
-  			<div class='bottom_center'></div>
-  		 </div>
+  		
   	</div>
   </body>
   <script type="text/javascript">
-  	var xml=new XMLHttpRequest();
-  	/* document.getElementsByClassName("code_pic")[0].onclick=function(event){
-  		ajax({
-  			method:"get",
-  			url:"http://192.168.0.128:80/alipaysys/alipay/CodeChange.jsp?t="+Math.random()*10
-  			},function(msg){
-  				document.getElementsByClassName("code_pic")[0].innerHTML=msg.data;
-  			},
-  			function(error){
-  				alert(error,status)
-  			});
-  		
-  	} */
-  	function ajax(obj,success,error){
-			xml.onreadystatechange=function(){
-				if(xml.status==200&&xml.readyState==4){
-					//返回值
-					var txt=xml.responseText;
-					if(txt=='error'){
-						error({
-							status:500
-						});
-					}else{
-						success({
-							data:txt
-						});
-					}
-				}
-			}
-		xml.open(
-			obj.method,
-			obj.url,
-			"true"
-		);	
-		xml.send();
-		}
-  	document.getElementById('code').onclick=function(event){
-  		event.target.src='./CodeServlet?id='+Math.random();
-  	}
+  
   </script>
 </html>
