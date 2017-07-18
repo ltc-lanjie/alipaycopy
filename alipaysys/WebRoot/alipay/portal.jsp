@@ -27,9 +27,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<div class="head_left">
 						<ul >
 							<li >
-								<i class="iconfont"></i>
+								<a><img src="./image/back.png" style="width: 20px;height: 20px;" align="absmiddle"/></a>
+								<a >返回淘宝网</a>
 							</li>
-							<li ></li>
+							
+							
+							<li >
+								<a><img src="./image/change.png" style="width: 20px;height: 20px;" align="absmiddle"/></a>
+								<a >切换成商业版</a>
+							</li>
 						</ul>
 					</div>
 					
