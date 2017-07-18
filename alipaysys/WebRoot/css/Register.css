@@ -1,5 +1,5 @@
 .top{
-	height: 75px;
+	height: 100px;
     width: 100%;
     background: #fff;
     border-bottom: 1px solid #e3e3e3;
@@ -24,7 +24,8 @@
 .top_center{
 	height:55px;
 	width:990px;
-	padding-top:20px;
+	padding-top:38px;
+	position:relative;
 	margin:0px auto;
 }
 .top_left{
@@ -201,7 +202,7 @@ ul,li{
 	background:url('../image/register_center.png') no-repeat  0px  -71px;
 	height:11px;
 	width:25px;
-	left: 746px;
+	left: 37%;
     margin-top: -2px;
 	position:absolute;
 }
@@ -378,6 +379,9 @@ ul,li{
 .title_line3{
 	height:52px;
 	width:100%;
+	margin-bottom: 23px;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 23px;
 }
 .strong_f1{
 	margin-left: 25px;
@@ -408,4 +412,85 @@ ul,li{
 	font-size: 14px;
 	margin-right:10px;
 	color: #4c4c4c;
+}
+.box_input{
+	height:64px;
+	width:184px;
+	border:1px solid #ccc;
+	padding:2px;
+}
+.register2_submit{
+	background:#f09512;
+	height:31px;
+	width:82px;
+	font-size:14px;
+	border:0px;
+	color:#fff;
+	font-weight: bold;
+	letter-spacing:7px;
+	text-align:center;
+	border-rauius:2px;
+}
+.register2_picture{
+	background-position: -17px -10px;
+    height: 270px;
+    left: 773px;
+    position: relative;
+    top: -314px;
+    width: 225px;
+    background:url('../image/register2_logo.png') no-repeat;
+}
+.register3_hint{
+	height:16px;
+	width:100%;
+	line-height:16px;
+	margin-top:15px;
+	margin-bottom:25px;
+}
+.top_title{
+	background:#242735;
+	height:26px;
+	position:absolute;
+	width:100%;
+	
+}
+.hint1{
+	   color: #ff9702;
+    font-size: 16px;
+    
+    float: right;
+   
+   margin-right: 13px;
+}
+.hint2{
+	font-size: 13px;
+	 float: right;
+	     width: 639px;
+}
+.identific{
+	display: inline-block;
+    float: left;
+    width: 80px;
+    height: 20px;
+    border: 1px solid #ccc;
+    text-align: left;
+    line-height: 20px;
+    position: relative;
+    margin-top: 11px;
+    padding: 2px;
+    margin-right: 8px;
+}
+.tel_code{
+	float:left;
+	margin-top:10px;
+	position: relative;
+    margin-top: 10px;
+    height: 21px;
+    width: 117px;
+    padding: 5px;
+    text-align:center;
+    margin-left:10px; 
+	background: #f8f8f8;    
+        line-height:21px;
+    border:1px solid #e4e4e4;;
 }

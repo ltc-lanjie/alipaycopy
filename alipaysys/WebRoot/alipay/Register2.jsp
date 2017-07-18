@@ -22,9 +22,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-	<%
-		new Code().changeCode("D:/zhengyuelai/java/MyEclipse/alipaycopy/alipaysys/WebRoot/image/code.png");
-	%>
+	
 	<style type="text/css">
 		body{
 			margin:0px;
@@ -81,10 +79,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   					<div class='rotate_font'>1</div>
   					<div class='rotate_font2'>创建用户</div>
   				</div>
-  				<div class='border'></div>
-  				<div class='box1 bg_gold'>
+  				<div class='border' style='background:#f16f20;'></div>
+  				<div class='box1 bg_gold'  style='background:#f16f20;'>
   					<div class='rotate_font '>2</div>
-  					<div class='rotate_font2 gold'>设置身份信息</div>
+  					<div class='rotate_font2 gold'  style='color:#f16f20;'>设置身份信息</div>
   				</div>
   				<div class='border  '></div>
   				<div class='box1 bg_gold'>
@@ -124,7 +122,101 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   					</div>
   					<label class='pwd_text'>再输入一次</label>
   				</div>
+  				
+  				<div class='title_line1'>
+  					<strong class='strong_f1'>设置支付密码</strong>
+  					<label class='strong_f2'>交易付款或账户信息更改时需输入（不能与淘宝或支付宝登录密码相同）</label>
+  				</div>
+  				<div class='title_line2'>
+  					<div class='title_line2_pwd'>
+  						<input type='password' class='pwd1' required>
+  					</div>
+  					<label class='pwd_text'>支付密码</label>
+  				</div>
+  				<div class='title_line3'>
+  					<div class='title_line2_pwd'>
+  						<input type='password' class='pwd1' required>
+  					</div>
+  					<label class='pwd_text'>再输入一次</label>
+  				</div>
+  				
+  				<div class='title_line1'>
+  					<strong class='strong_f1'>设置身份信息</strong>
+  					<label class='strong_f2'>请务必准确填写本人的身份信息，注册后不能更改，隐私信息未经本人许可严格保密</label>
+  				</div>
+  				<div class='title_line2'>
+  					<div class='title_line2_pwd'>
+  						<input type='text' class='pwd1' required>
+  					</div>
+  					<label class='pwd_text'>真实姓名</label>
+  				</div>
+  				<div class='title_line2'>
+  					<div class='title_line2_pwd'>
+  						<input type='radio' name='sex' value='男'>男
+  						<input type='radio' name='sex' value='女'>女
+  						
+  					</div>
+  					<label class='pwd_text'>性别</label>
+  				</div>
+  				<div class='title_line2'>
+  					<div class='title_line2_pwd'>
+  						<input type='text' class='pwd1' required>
+  					</div>
+  					<label class='pwd_text'>身份证号码</label>
+  				</div>
+  				<div class='title_line2'>
+  					<div class='title_line2_pwd'>
+  						<input type='date' class='pwd1' value='2017-01-01' required>
+  						<input type='checkbox' >长期
+  					</div>
+  					<label class='pwd_text'>有效期</label>
+  				</div>
+  				<div class='title_line2'>
+  					<div class='title_line2_pwd'>
+  						<select class='pwd1' >
+  							<option> - - - - - -请选择- - - - - -</option>
+  							<option>党的机关、国家机关、群众团体和社会组</option>
+  							<option>织、企事业单位负责人</option>
+  							<option>专业技术人员</option>
+  							<option>办事人员和有关人员</option>
+  							<option>社会生产服务和生活服务人员</option>
+  							<option>农、林、牧、渔业生产及辅助人员</option>
+  							<option>生产制造及有关人员</option>
+  							<option>军人</option>
+  							<option>不便分类的其他从业人员</option>
+  						</select>
+  					</div>
+  					<label class='pwd_text'>职业</label>
+  				</div>
+  				<div class='title_line2'>
+  					<div class='title_line2_pwd'>
+  						<select>
+  							<option>请选择</option>
+  						</select>
+  						<select>
+  							<option>请选择</option>
+  						</select>
+  						<select>
+  							<option>请选择</option>
+  						</select>
+  					</div>
+  					<label class='pwd_text'>常用地址</label>
+  				</div>
+  				<div class='title_line2' style='height:93px;'>
+  					<div class='title_line2_pwd' style='height:93px;'>
+  						<div class='box_input'></div>
+  					</div>
+  					
+  				</div>
+  				<div class='title_line2' >
+  					<div class='title_line2_pwd'>
+  						<input type='submit' class='register2_submit' value='确定'>
+  					</div>
+  					
+  				</div>
+  				 <div class='register2_picture'></div>
   		 </div>
+  		
   		
   	</div>
   </body>
