@@ -29,9 +29,10 @@ public interface TransactionDao {
 	 * 
 	 * 
 	 * @param map
+	 * @param page 页数
 	 * @return List<Transaction> 
 	 */
-	List<Transaction> select(Map<String,String> map);
+	List<Transaction> select(Map<String,String> map,int page);
 	/*List<Transaction> selectRid(int rid);
 	List<Transaction> selectRorder(int rorder);
 	
