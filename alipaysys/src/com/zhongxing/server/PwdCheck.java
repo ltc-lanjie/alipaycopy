@@ -13,11 +13,18 @@ public interface PwdCheck {
 	 */
 	String loginCheck(String uname,String uloginpwd);
 	/**
-	 * 判断支付面膜是否正确
+	 * 判断支付密码是否正确
 	 * @param uname
 	 * @param upaypwd
-	 * @return booolean
+	 * @return boolean
 	 */
 	boolean payCheck(String uname,String upaypwd);
+	/**
+	 * 判断登录密码是否正确
+	 * @param uname
+	 * @param uloginpwd
+	 * @return boolean
+	 */
+	boolean LoginpwdCheck(String uname,String uloginpwd);
 	
 }

@@ -5,7 +5,7 @@ import java.util.List;
 import com.zhongxing.entity.Address;
 
 /**
- * dao层收货地址的进一步封装
+ * dao层收货地址的进一步封装,异常处理
  * @author ZhongXing
  *
  */

@@ -1,6 +1,7 @@
 package com.zhongxing.entity;
 /**
- * 账户余额  id,账户余额，余额宝
+ * 账户余额 
+ *  id,账户余额，余额宝
  * @author ZhongXing
  *
  */

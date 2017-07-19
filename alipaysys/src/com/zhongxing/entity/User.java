@@ -4,7 +4,7 @@ import java.util.Date;
 
 /**
  * 用户个人信息
- * id，淘宝用户名，注册时间，实名认证，身份证
+ * id，淘宝用户名，注册时间，实名认证，身份证，性别
  * @author ZhongXing
  *
  */
@@ -14,13 +14,21 @@ public class User {
 	private Date usigntime;
 	private String utruename;
 	private String uidentity;
+	private String usex;
+	public String getUsex() {
+		return usex;
+	}
+	public void setUsex(String usex) {
+		this.usex = usex;
+	}
 	public User() {
 		super();
 	}
 	public User(Integer uid, String uvipname, Date usigntime, String utruename,
-			String uidentity) {
+			String uidentity,String usex) {
 		super();
 		this.uid = uid;
+		this.usex = usex;
 		this.uvipname = uvipname;
 		this.usigntime = usigntime;
 		this.utruename = utruename;

@@ -1,16 +1,16 @@
-package com.zhongxing.dao;
+package com.zhongxing.server;
 
 import java.util.List;
 
 import com.zhongxing.entity.User;
 
 /**
- * 用户个人信息连接数据库接口
+ * 用户个人信息 异常处理
  * id，淘宝用户名，注册时间，实名认证，身份证,性别
  * @author ZhongXing
  *
  */
-public interface UserDao {
+public interface UserShow {
 	/**
 	 *  根据id查询所有
 	 * @param uid
@@ -24,7 +24,7 @@ public interface UserDao {
 	 */
 	List<User> select (String uvipname);
 	/**
-	 * 插入新用户
+	 * 插入新用户，判断user中字段是否为空
 	 * @param user
 	 * @return boolean
 	 */

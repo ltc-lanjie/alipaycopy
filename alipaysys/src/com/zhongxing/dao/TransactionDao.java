@@ -25,7 +25,7 @@ public interface TransactionDao {
 	static final String RORDER="rorder";
 	static final String RTRANSSTATUS="rtransstatus";
 	/**
-	 * 根据Hashmap来接收数据 
+	 * 根据Hashmap来接收数据 ，并进行查询
 	 * 
 	 * 
 	 * @param map
@@ -59,7 +59,7 @@ public interface TransactionDao {
 	 */
 	boolean insert(Transaction transaction);
 	/**
-	 * 根据记录号删除一条数据，除了备注其他要保证不为空
+	 * 根据记录号删除一条数据，
 	 * @param rid 对象
 	 * @return Boolean
 	 */
