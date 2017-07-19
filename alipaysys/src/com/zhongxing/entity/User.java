@@ -68,6 +68,7 @@ public class User {
 	public String toString() {
 		return "User [uid=" + uid + ", uvipname=" + uvipname + ", usigntime="
 				+ usigntime + ", utruename=" + utruename + ", uidentity="
-				+ uidentity + "]";
+				+ uidentity + ", usex=" + usex + "]";
 	}
+
 }

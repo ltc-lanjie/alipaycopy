@@ -10,7 +10,7 @@ public class Address {
 	private String deliveryadd;
 	private String acceptuser;
 	private Integer postalcode;
-	private Integer mobphone;
+	private String mobphone;
 	private String province;
 	private String area;
 	private String fixphone;
@@ -18,7 +18,7 @@ public class Address {
 		super();
 	}
 	public Address(Integer uid, Integer addid, String deliveryadd,
-			String acceptuser, Integer postalcode, Integer mobphone,
+			String acceptuser, Integer postalcode, String mobphone,
 			String province, String area, String fixphone) {
 		super();
 		this.uid = uid;
@@ -61,10 +61,10 @@ public class Address {
 	public void setPostalcode(Integer postalcode) {
 		this.postalcode = postalcode;
 	}
-	public Integer getMobphone() {
+	public String getMobphone() {
 		return mobphone;
 	}
-	public void setMobphone(Integer mobphone) {
+	public void setMobphone(String mobphone) {
 		this.mobphone = mobphone;
 	}
 	public String getProvince() {
