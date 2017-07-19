@@ -5,7 +5,8 @@ import java.util.List;
 import com.zhongxing.entity.Address;
 
 /**
- * 收货地址的连接数据库方法
+ * 收货地址的连接数据库方法 
+ * 账号id，详细信息，收货地址id，收货人，省份，区，邮政编码，手机，电话
  * @author ZhongXing
  *
  */
@@ -37,18 +38,18 @@ public interface AddressDao {
 	 */
 	boolean delete(int uid,int addid);
 	/**
-	 * 根据uid和addid更新某一条地址，不报错则返回true
+	 * 根据Address对象更新某一条地址，不报错则返回true
 	 * @param uid
 	 * @param addid
 	 * @param deliveryadd
 	 * @return boolean
 	 */
-	boolean update(int uid,int addid,String deliveryadd);
+	boolean update(Address address);
 	/**
-	 * 根据uid,addid和地址来插入一条数据，不报错则返回true
+	 * 根据Address对象来插入一条数据，不报错则返回true
 	 * @param uid
 	 * @param deliveryadd
 	 * @return boolean
 	 */
-	boolean insert(int uid,int addid,String deliveryadd);
+	boolean insert(Address address);
 }

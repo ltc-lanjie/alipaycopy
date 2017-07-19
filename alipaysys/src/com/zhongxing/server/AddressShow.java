@@ -30,22 +30,22 @@ public interface AddressShow {
 	 */
 	boolean delete(int uid);
 	/**
-	 * 删除制定uid下的某一条收货地址，不报错则返回true
+	 * 删除制定uid下的某一条收货地址，成功返回true
 	 * @param uid
 	 * @param addid
 	 * @return boolean
-	 */
+	 */	
 	boolean delete(int uid,int addid);
 	/**
-	 * 根据uid和addid更新某一条地址，不报错则返回true
+	 * 根据Address对象中的数据来修改一些数据，这里要做异常处理，筛选数据
 	 * @param uid
 	 * @param addid
 	 * @param deliveryadd
 	 * @return boolean
 	 */
-	boolean update(int uid,int addid,String deliveryadd);
+	boolean update(Address address);
 	/**
-	 * 根据uid,addid和地址来插入一条数据，不报错则返回true
+	 * 根据Address对象中的数据更新一条数据，要对Address对象进行筛选
 	 * @param uid
 	 * @param deliveryadd
 	 * @return boolean
