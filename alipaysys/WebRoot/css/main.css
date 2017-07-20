@@ -344,7 +344,6 @@ input:-webkit-autofill {
 	color: #fff;
 	font-size: 13px;
 }
-<<<<<<< HEAD
 
 .iconfont {
 	font-family: "rei";
@@ -490,21 +489,3 @@ input:-webkit-autofill {
     font-size: 1px;
     background-position: -621px -262px;
 }
-
-
-
-
-=======
-.login_fail{
-	background: #fdeee9;
-    font-size: 12px;
-    height: 40px;
-    width: 212px;
-    line-height: 20px;
-    padding-left: 5px;
-    border: 1px solid #fadcd3;
-    color: #4D4D4D;
-    margin-top: 17px;
-    margin-bottom: 10px;
-}
->>>>>>> c8b8cf7f11815ab9eac4a12e67eb85a5e6a4b2e4
