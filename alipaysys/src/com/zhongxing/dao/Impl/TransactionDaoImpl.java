@@ -1,7 +1,7 @@
 package com.zhongxing.dao.Impl;
 
-import java.sql.Connection;
-import java.util.HashMap;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -10,7 +10,6 @@ import java.util.Set;
 import com.zhongxing.dao.DBDao;
 import com.zhongxing.dao.TransactionDao;
 import com.zhongxing.entity.Transaction;
-import com.zhongxing.util.JDBCUtil;
 
 public class TransactionDaoImpl implements TransactionDao {
 
@@ -38,18 +37,20 @@ public class TransactionDaoImpl implements TransactionDao {
 
 	@Override
 	public boolean insert(Transaction transaction) {
+		SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String sql =String.format(
-				"insert into transaction(routid,rinid,rmoney,rpaytime,rreport,rorder,rtransstatus) values(%d,%d,%lf,'%s','%s',%d,'%s');",
-				transaction.getRoutid(),transaction.getRinid(),transaction.getRmoney(),transaction.getRpaytime(),transaction.getRreport(),transaction.getRorder(),transaction.getRtransstatus());
+				"insert into transaction(routid,rinid,rmoney,rpaytime,rreport,rorder,rtransstatus) values(%d,%d,%e,'%s','%s',%d,'%s');",
+				transaction.getRoutid(),transaction.getRinid(),transaction.getRmoney(),sdf.format(transaction.getRpaytime()),transaction.getRreport(),transaction.getRorder(),transaction.getRtransstatus());
 		DBDao dbdao=new DBDaoImpl();
 		return dbdao.insert(sql);
 	}
 
 	@Override
 	public boolean delete(int rid) {
-		String sql= String.format("update transaction set rtransstatus = '%s' where rid = '%d'", "disable",rid);
+		/*String sql= String.format("update transaction set rtransstatus = '%s' where rid = '%d'", "disable",rid);
 		DBDao dbdao = new DBDaoImpl();
-		return dbdao.update(sql);
+		return dbdao.update(sql);*/
+		return false;
 	}
 
 	@Override
@@ -60,11 +61,15 @@ public class TransactionDaoImpl implements TransactionDao {
 	}
 
 	public static void main(String[] orgs){
-		HashMap<String, String> hm = new HashMap<>();
-        hm.put(TransactionDao.RID,String.valueOf(678436436));
-       /* hm.put("test1","test4");
-        hm.put("test2", "test4");*/
-        TransactionDao td=new TransactionDaoImpl();
-        td.select(hm, 0);
+		/*Transaction t=new Transaction();
+		t.setRinid(1001);
+		t.setRmoney(300.0);
+		t.setRorder(1);
+		t.setRoutid(1002);
+		t.setRpaytime(new Date());
+		t.setRreport("aa");
+		t.setRtransstatus("aa");
+		TransactionDao td=new TransactionDaoImpl();
+		System.out.println(td.insert(t));*/
 	}
 }
