@@ -1,6 +1,6 @@
 package com.zhongxing.entity;
 /**
- * 收货地址 账号id，详细信息，收货地址id，收货人，省份，区，邮政编码，手机，电话
+ * 收货地址 账号id，详细信息，收货地址id(最多5条)，收货人，省份，区，邮政编码，手机，电话
  * @author ZhongXing
  *
  */

@@ -45,10 +45,12 @@ public interface AddressShow {
 	 */
 	boolean update(Address address);
 	/**
-	 * 根据Address对象中的数据更新一条数据，要对Address对象进行筛选
+	 * 插入数据,，这里要做异常处理，筛选数据
 	 * @param uid
+	 * @param addid
 	 * @param deliveryadd
-	 * @return boolean
+	 * @return
 	 */
-	boolean insert(int uid,int addid,String deliveryadd);
+	boolean insert(Address address);
+	
 }

@@ -64,6 +64,7 @@ public class Test2  extends Son  implements Test1{
 		for(Object o:l){
 			System.out.println(o);
 		}*/
+		System.out.println(null==null);
 	}
 
 	
