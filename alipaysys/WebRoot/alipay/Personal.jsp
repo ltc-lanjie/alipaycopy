@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ page language="java" import="java.util.*,com.zhongxing.server.*, com.zhongxing.server.impl.*" pageEncoding="utf-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -25,13 +25,33 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				position: absolute;
 				
 			}
+			.login_box{
+				width: 114px;
+			    height: 28px;
+			    line-height: 28px;
+			    position: relative;
+			    top: 24px;
+			    color: #fff;
+			    background: #0be;
+			    font-size: 13px;
+			    text-align: center;
+			    padding: 2px;
+			    left: 50px;
+			}
 			/*分页*/
 			
 		</style>
 	</head>
 
 	<body>
-	
+		<%	
+			boolean flag=false;
+			if(session.getAttribute("user")!=null){
+				flag=true;
+			}else{
+				flag=false;
+			}
+		%>
 		<div class='main'>
 						<!--固定样式-->
 					
@@ -48,8 +68,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								<a href="#">合作伙伴</a>
 							</div>
 							<div class="top1right">
+								<%
+									if(flag){
+								%>
+									<a>你好,<%=session.getAttribute("user")%></a>
+									<a href="#" id="exit">退出</a>
+									<a href="#">我的支付宝</a>
+									<a>|</a>
+									<a href="#">支付宝APP</a>
+									<a>|</a>
+								<%} %>
 								<a href="#">支付宝</a>
 								<a>|</a>
+								
 								<!--选择菜单-->
 								<div class="topselect">
 									<a href="#" id='select'>客户服务
@@ -68,7 +99,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<div class='top2'>
 						<div class="top2center">
 							<div class="top2right">
-								<a href="../Main.jsp" id='bluefont'>首页</a>
+								<a href="http://localhost/alipaysys" id='bluefont'>首页</a>
 								<a href="#">财富中心</a>
 								<a href="#">安全保障</a>
 								<a>|</a>
@@ -76,9 +107,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								<a href="#">开放平台</a>
 							</div>
 							<!--隐藏登录栏-->
+							
+							<%
+								if(flag==false){
+							%>
 							<div class='hiddenbox'>
 								<div class='hiddenlogin'>登录</div>
-								<a href='./Register.jsp'><div class='hiddenregister'>注册</div></a>
+								<a href='./Register.jsp'>
+									<div class='hiddenregister'>注册</div>
+								</a>
+								<%}else{ %>
+								<div class='hiddenbox' style='visibility:visible;'>
+									<a>
+										<div class='login_box'>进入我的支付宝</div>
+									</a>	
+								<% } %>
 							</div>
 						</div>
 					</div>
@@ -192,10 +235,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div class='leat1'>
 					<!--中间登录框-->
 					<div class="loginmax">
-						<div class="loginbox">
+					<div class="loginbox">
+					<%
+						if(flag==false){
+					%>
 							<a href="#" class="box1">登录</a>
 							<a href="./Register.jsp" class="box2">立即注册</a>
-						</div>
+					<%
+						}
+					%>
+					</div>	
 						<!--播放按钮-->
 						<div class='round'>
 							<div class='triangle'></div>
@@ -495,19 +544,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			//return Number(this.event.srcElement.className.substring(8,9));this.event.srcElement获取事件源
 			changecolor(i,
 				function (check1,check2,img){
-					if(check1==true&&check2==true){
 						$('.hiddenbox').style.visibility='visible';
-						$('.v').style.visibility='visible';
-					}else if(check1==false){
-						$('.v').style.visibility='hidden';
-						$('.hiddenbox').style.visibility='visible';
-					}else if(check2==false){
-						$('.hiddenbox').style.visibility='hidden';
-						$('.v').style.visibility='visible';
+						if(check1==true&&check2==true){
+							$('.hiddenbox').style.visibility='visible';
+							$('.v').style.visibility='visible';
+						}else if(check1==false){
+							$('.v').style.visibility='hidden';
+							$('.hiddenbox').style.visibility='visible';
+						}else if(check2==false){
+							if(!<%=flag%>){
+								$('.hiddenbox').style.visibility='hidden';
+							}
+							$('.v').style.visibility='visible';
+						}
+						if(img!=undefined){
+							img.style.opacity='1';
+						
 					}
-					if(img!=undefined){
-						img.style.opacity='1';
-					}
+					
 				}
 			);
 		}
@@ -596,7 +650,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		}
 		
 	}
-	
+	$('#exit').onclick=function(){
+		
+	}
 	</script>
 		
 		
