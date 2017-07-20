@@ -7,7 +7,7 @@ package com.zhongxing.entity;
  */
 public class Loginstatus {
 	private String uname;
-	private Integer type;
+	private Integer utype;
 	private String uemail;
 	private String uloginpwd;
 	private String utelphone;
@@ -20,7 +20,7 @@ public class Loginstatus {
 			String uloginpwd, String utelphone, String upaypwd, Integer uid) {
 		super();
 		this.uname = uname;
-		this.type = type;
+		this.utype = type;
 		this.uemail = uemail;
 		this.uloginpwd = uloginpwd;
 		this.utelphone = utelphone;
@@ -33,11 +33,11 @@ public class Loginstatus {
 	public void setUname(String uname) {
 		this.uname = uname;
 	}
-	public Integer getType() {
-		return type;
+	public Integer getUtype() {
+		return utype;
 	}
-	public void setType(Integer type) {
-		this.type = type;
+	public void setUtype(Integer type) {
+		this.utype = type;
 	}
 	public String getUemail() {
 		return uemail;
@@ -71,7 +71,7 @@ public class Loginstatus {
 	}
 	@Override
 	public String toString() {
-		return "Loginstatus [uname=" + uname + ", type=" + type + ", uemail="
+		return "Loginstatus [uname=" + uname + ", type=" + utype + ", uemail="
 				+ uemail + ", uloginpwd=" + uloginpwd + ", utelphone="
 				+ utelphone + ", upaypwd=" + upaypwd + ", uid=" + uid + "]";
 	}

@@ -24,14 +24,14 @@ public interface CardDao {
 	 * @param newucard 替换的银行卡
 	 * @return
 	 */
-	boolean update(int uid,int olducard,int newucard);
+	boolean update(int uid,String olducard,String newucard);
 	/**
 	 * 增加一张银行卡
 	 * @param uid
 	 * @param ucard
 	 * @return boolean
 	 */
-	boolean insert(int uid,int ucard);
+	boolean insert(int uid,String ucard);
 	/**
 	 * 删除当前id下所有的银行卡
 	 * @param uid
@@ -44,5 +44,5 @@ public interface CardDao {
 	 * @param ucard
 	 * @return boolean 
 	 */
-	boolean delete(int uid,int ucard);
+	boolean delete(int uid,String ucard);
 }

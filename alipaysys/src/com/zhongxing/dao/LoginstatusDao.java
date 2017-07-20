@@ -69,7 +69,7 @@ public interface LoginstatusDao {
 	 * @param type
 	 * @return boolean
 	 */
-	boolean updateEmail(int uid,int type);
+	boolean updateType(int uid,int utype);
 	/**
 	 * 邮箱注册
 	 * 插入一条新的账户 

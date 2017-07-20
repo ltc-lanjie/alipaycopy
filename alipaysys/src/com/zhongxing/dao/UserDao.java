@@ -18,13 +18,13 @@ public interface UserDao {
 	 */
 	List<User> select (int uid);
 	/**
-	 *  根据用户名查询所有
+	 *  根据淘宝用户名查询所有
 	 * @param uname
 	 * @return List<User> 
 	 */
 	List<User> select (String uvipname);
 	/**
-	 * 插入新用户
+	 * 插入新用户,除了淘宝用户名其他都要有
 	 * @param user
 	 * @return boolean
 	 */
