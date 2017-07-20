@@ -42,6 +42,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   	
   <body>
+  <%
+  	if(session.getAttribute("user")!=null){
+  		RequestDispatcher rd= request.getRequestDispatcher("./Personal.jsp");
+  		rd.forward(request, response);
+  		
+  	}
+  %>
    		<div class='main'>
    			<div class='head'>
    				<div class='head_center'>
@@ -96,7 +103,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    									
    							</div>
    							<div class='login_box2'>
-   								<form method='post' action=''  autocomplete="off">
+   								<form method='post' action='./LoginCheckServlet'  autocomplete="off">
+   									<%
+   										if(request.getAttribute("login")!=null){
+   											%>
+   											<div class='login_fail'>
+   	   										<span><%=request.getAttribute("login")%></span>
+   	   									</div>
+   	   									<% 
+   										}
+   									%>
    									<div class='user_box'>
    										<img alt="用户" src="./image/login_user_logo.png">
    										<input type='text' name='user' class='user' placeholder='邮箱/手机号/淘宝用户名' required>
@@ -109,7 +125,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    										<a href=''>忘记登录密码?</a>
    									</div>
    									<input type='submit' value='登录' class='login_button'>
-   									<div class='login_bottom'>
+   									<div class='login_bottom' style='min-height:43px;'>
    										<a href='' class='taobao_login'>淘宝会员登录</a>
    										<a href='./alipay/Register.jsp' class='register'>免费注册</a>
   									</div>

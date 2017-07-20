@@ -12,7 +12,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 		<meta http-equiv="description" content="this is my page">
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<link rel="stylesheet" type="text/css" href="../css/Personal.css">
+		<link rel="stylesheet" type="text/css" href="http://192.168.0.128/alipaysys/css/Personal.css">
 		<style type="text/css">
 			body {
 				margin: 0px;
@@ -31,6 +31,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</head>
 
 	<body>
+	
 		<div class='main'>
 						<!--固定样式-->
 					
@@ -204,7 +205,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<div class='bg1'></div>
 					<!--视频1-->
 					<video class="video" autoplay>
-						<source src="../image/1.mp4" type="video/mp4" />
+						<source src="http://192.168.0.128/alipaysys/image/1.mp4" type="video/mp4" />
 					</video>
 				</div>
 

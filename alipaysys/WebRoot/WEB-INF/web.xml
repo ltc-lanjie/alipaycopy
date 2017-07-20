@@ -6,10 +6,20 @@
    
     <servlet-class>com.zhongxing.servlet.CodeServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>LoginCheckServlet</servlet-name>
+    
+    <servlet-class>com.zhongxing.servlet.LoginCheckServlet</servlet-class>
+  </servlet>
+
 
   <servlet-mapping>
     <servlet-name>CodeServlet</servlet-name>
     <url-pattern>/CodeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginCheckServlet</servlet-name>
+    <url-pattern>/LoginCheckServlet</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>Main.jsp</welcome-file>
