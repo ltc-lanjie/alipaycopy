@@ -41,11 +41,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     			<div class='top'>
     				<div class="top_logo"></div>
     				<div class="top_login">
-    					<% %>
+    					<%if(session.getAttribute("user")!=null){ %>
+    						<span class='state'>你好，<%=session.getAttribute("user") %></span>
+    					<%}else{ %>
     					<span class='state'>我已有支付宝账户</span>
     					<a href='./alipay/Login.jsp'>快速登录</a>
-    					<!-- <span class='state'>你好，ddd</span> -->
-    					<% %>
+    					<%}%>
     				</div>
     			</div>
     		</div>
