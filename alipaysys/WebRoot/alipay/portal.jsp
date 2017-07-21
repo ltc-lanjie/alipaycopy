@@ -180,11 +180,36 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												</div>
 											</div>
 										</td>
-										<td rowspan="2">
-											<div class="balance-content"></div>
+										<td rowspan="2" class="balance-td">
+											<div class="balance-content">
+												<div class="balance-header">
+													<h3 style="font-size: 14px;font-weight: 200;">花呗</h3>
+												</div>
+												<div class="balance-body">
+													
+												</div>
+											</div>
 										</td>
-										<td rowspan="2">3</td>
-										<td rowspan="2">4</td>
+										<td rowspan="2" class="balance-td">
+											<div class="balance-content">
+												<div class="balance-header">
+													<h3 style="font-size: 14px;font-weight: 200;">招财宝</h3>
+												</div>
+												<div class="balance-body">
+													
+												</div>
+											</div>
+										</td>
+										<td rowspan="2" class="balance-td">
+											<div class="balance-content">
+												<div class="balance-header">
+													<h3 style="font-size: 14px;font-weight: 200;">其他账户</h3>
+												</div>
+												<div class="balance-body">
+													
+												</div>
+											</div>
+										</td>
 									</tr>
 									
 									<tr >
@@ -211,7 +236,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 															
 														</div>
 														
-														<span style="color: #0088CC;margin-top: 15px;float: left;text-decoration: underline;cursor: pointer;margin-left: 9px;">更多理财</span>
+														<span style="color: #0088CC;margin-top: 15px;float: left;text-decoration: underline;cursor: pointer;margin-left: 9px;font-size: 14px;">更多理财</span>
 														
 														<div class="assets-footer" style="background-image: url(./image/3UfjZtusGj.png);">
 															
