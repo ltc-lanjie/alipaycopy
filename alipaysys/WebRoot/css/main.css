@@ -489,3 +489,6 @@ input:-webkit-autofill {
     font-size: 1px;
     background-position: -621px -262px;
 }
+.balance-content{
+	margin: 0 15px 20px;
+}
