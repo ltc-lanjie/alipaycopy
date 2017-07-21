@@ -113,7 +113,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							%>
 							<div class='hiddenbox'>
 								<div class='hiddenlogin'>登录</div>
-								<a href='./Register.jsp'>
+								<a href='http://localhost/alipaysys/alipay/Register.jsp'>
 									<div class='hiddenregister'>注册</div>
 								</a>
 								<%}else{ %>
@@ -173,6 +173,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								<div class="close">
 									<a href="#" id='x'>x</a>
 								</div>
+								
 								<!--切换图片-->
 								<div class="change">
 									<div id="changeimg1" class='tran5'></div>
@@ -180,17 +181,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								</div>
 								<!--登录框-->
 								<div class='logincenterline'>
-									<form name="save" action="#" method="post">
+								
+									<form name="save" accept-charset='utf-8' action='http://localhost/alipaysys/LoginCheckServlet' method="post">
+										
 										<div class="loginpage">
-											<div class="logintitle1">登录支付宝</div>
+											<div class="logintitle1">
+											<!-- <div class='login_fail'>
+    	   										<span>123123sad</span>
+    	   									</div> -->
+											登录支付宝
+											</div>
+											
 											<div class="logincenter1">
 												<!--用户名-->
 												<div class="usename">
-													<input type="text" id="usename" name="usename" placeholder="邮箱/手机号/淘宝会员名" value="" class="usenameinput">
+													<input type="text" id="usename" name="user" placeholder="邮箱/手机号/淘宝会员名" value="" class="usenameinput" required>
 												</div>
 												<!--密码-->
 												<div class="psw">
-													<input type="password" id="psw" name="password" class="pswinput">
+													<input type="password" id="psw" name="pwd" class="pswinput" required>
 												</div>
 											</div>
 											<!--登录框底部-->
@@ -201,9 +210,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 											<div class="logincenter">
 												<input type="submit" value="登陆" class='signin'/>
 												<div class="loginbotton">
-													<a href="#">淘宝会员登录</a>
+													<a href="http://localhost/alipaysys/alipay/Login.jsp">淘宝会员登录</a>
 													<a href="#">用户激活</a>
-													<a href="./Register.jsp" style="color:#0be;float:right">免费注册</a>
+													<a href="http://localhost/alipaysys/alipay/Register.jsp" style="color:#0be;float:right">免费注册</a>
 												</div>
 											</div>
 										</div>
@@ -240,7 +249,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						if(flag==false){
 					%>
 							<a href="#" class="box1">登录</a>
-							<a href="./Register.jsp" class="box2">立即注册</a>
+							<a href="http://localhost/alipaysys/alipay/Register.jsp" class="box2">立即注册</a>
 					<%
 						}
 					%>
@@ -651,7 +660,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		
 	}
 	$('#exit').onclick=function(){
-		
+		window.location.href='http://localhost/alipaysys/Exit';
 	}
 	</script>
 		
