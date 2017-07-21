@@ -43,7 +43,7 @@ public class PwdCheckImpl implements PwdCheck {
 		if(li.size()!=0){
 			Loginstatus login=li.get(0);
 			if(uloginpwd.equals(login.getUloginpwd())){
-				url="alipay/Personal.jsp";
+				url="alipay/portal.jsp";
 			}
 		}
 		return url;

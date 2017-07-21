@@ -180,7 +180,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												</div>
 											</div>
 										</td>
-										<td rowspan="2">2</td>
+										<td rowspan="2">
+											<div class="balance-content"></div>
+										</td>
 										<td rowspan="2">3</td>
 										<td rowspan="2">4</td>
 									</tr>
