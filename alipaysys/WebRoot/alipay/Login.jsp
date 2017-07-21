@@ -39,7 +39,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<div class='head_right'>
 						<ul>
 							<li>
-								<a href='/alipaysys/alipay/' target='_Blank'>支付宝首页</a>
+								<a href='/alipaysys/' target='_Blank'>支付宝首页</a>
 							</li>
 							<li>|
 							</li>
