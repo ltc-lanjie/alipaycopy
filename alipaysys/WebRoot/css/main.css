@@ -444,7 +444,7 @@ input:-webkit-autofill {
 .content{
 	width: 990px;
 	margin: 0 auto;
-	padding: 0;
+	padding: 109px;
 }
 .content-body{
 	margin-top: 15px;
@@ -474,6 +474,8 @@ input:-webkit-autofill {
 	text-decoration: underline;
 	color: #0088CC;
 	font-size: 12px;
+	margin-left: 10px;
+	cursor: pointer;
 }
 .assets-footer{
 	cursor: pointer;
