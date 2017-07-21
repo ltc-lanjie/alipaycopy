@@ -492,3 +492,14 @@ input:-webkit-autofill {
 .balance-content{
 	margin: 0 15px 20px;
 }
+.balance-header{
+	margin-top: 30px;
+}
+.balance-td{
+	width: 16.6666666666666%;
+	vertical-align: top;
+}
+.balance-body{
+	margin-bottom: 20px;
+	height: auto;
+}
