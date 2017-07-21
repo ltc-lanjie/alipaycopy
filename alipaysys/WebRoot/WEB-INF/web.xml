@@ -12,8 +12,14 @@
     <servlet-class>com.zhongxing.servlet.LoginCheckServlet</servlet-class>
   </servlet>
   <servlet>
+<<<<<<< HEAD
     <servlet-name>CodeCheckServlet</servlet-name>
     <servlet-class>com.zhongxing.servlet.CodeCheckServlet</servlet-class>
+=======
+    <servlet-name>Exit</servlet-name>
+    
+    <servlet-class>com.zhongxing.servlet.Exit</servlet-class>
+>>>>>>> 0278cd6d9e5742ecb05b3ad55344efa8cd20c5fa
   </servlet>
 
 
@@ -27,8 +33,13 @@
     <url-pattern>/LoginCheckServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
+<<<<<<< HEAD
     <servlet-name>CodeCheckServlet</servlet-name>
     <url-pattern>/CodeCheckServlet</url-pattern>
+=======
+    <servlet-name>Exit</servlet-name>
+    <url-pattern>/Exit</url-pattern>
+>>>>>>> 0278cd6d9e5742ecb05b3ad55344efa8cd20c5fa
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>Main.jsp</welcome-file>
