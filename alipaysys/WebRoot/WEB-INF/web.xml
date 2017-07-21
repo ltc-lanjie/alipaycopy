@@ -11,6 +11,11 @@
     
     <servlet-class>com.zhongxing.servlet.LoginCheckServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>CodeCheckServlet</servlet-name>
+    <servlet-class>com.zhongxing.servlet.CodeCheckServlet</servlet-class>
+  </servlet>
+
 
 
   <servlet-mapping>
@@ -20,6 +25,10 @@
   <servlet-mapping>
     <servlet-name>LoginCheckServlet</servlet-name>
     <url-pattern>/LoginCheckServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CodeCheckServlet</servlet-name>
+    <url-pattern>/CodeCheckServlet</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>Main.jsp</welcome-file>

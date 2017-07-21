@@ -1,19 +1,15 @@
 package com.zhongxing.servlet;
 
-import java.awt.Color;
 import java.io.IOException;
-import java.util.Random;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.zhongxing.util.Code;
-
-public class CodeServlet extends HttpServlet {
+public class CodeCheckServlet extends HttpServlet {
 
 	/**
 	 * The doGet method of the servlet. <br>
@@ -27,8 +23,19 @@ public class CodeServlet extends HttpServlet {
 	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
-		doPost(request, response);
+		request.setCharacterEncoding("utf-8");
+		response.setContentType("text/html charset=utf-8");
+		PrintWriter out = response.getWriter();
+		String i_code=request.getParameter("i_code");
+		HttpSession session=request.getSession();
+		if(session.getAttribute("code")!=null){
+			System.out.println("i_code:"+i_code+" code:"+session.getAttribute("code"));
+			if(i_code.equals(session.getAttribute("code"))){
+				out.print("success");
+			}else out.print("error"); //验证码错误
+		}else out.print("error1");//验证码超时
+		out.flush();
+		out.close();
 	}
 
 	/**
@@ -43,11 +50,8 @@ public class CodeServlet extends HttpServlet {
 	 */
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		response.setHeader("Cache-Control","No-Cache");
-		response.setDateHeader("Expires", 0);
-		String sb=new Code().changeCode(response.getOutputStream());
-		HttpSession session = request.getSession();
-		session.removeAttribute("code");
-        session.setAttribute("code", sb.toString());
+
+		doGet(request,response);
 	}
+
 }

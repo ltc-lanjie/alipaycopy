@@ -29,6 +29,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			position:relative;
 			display:inline-block;
 		}
+		.check_tel,.check_code{
+			display:inline;
+			font-size:20px;
+		}
 	</style>
 	</head>
   
@@ -101,8 +105,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   					<div class='register_line2'>手机号
   						<select class='select_tel_box'>
   							<option>86</option>
-  							<input type='text'placeholder='请输入你的手机号码' name='tel' class='tel_text' required>
   						</select>
+  							<input type='text'placeholder='请输入你的手机号码' name='tel' class='tel_text' required/>
+  						<p class="check_tel"></p>
   					</div>
   					<div class='register_line3'>
   						验证码
@@ -110,6 +115,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   						<div class='code_pic'>
   							<img src="./CodeServlet" id="code"/>
   						</div>
+  						<p class="check_code"></p>
   					</div>
   					<div class='register_line4'>
   						<input type='checkbox' class='check_box'>同意《
@@ -129,6 +135,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		 </div>
   	</div>
   </body>
+  <script src="./js/myjs.js"></script>
   <script type="text/javascript">
   	var xml=new XMLHttpRequest();
   	/* document.getElementsByClassName("code_pic")[0].onclick=function(event){
@@ -168,6 +175,39 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		}
   	document.getElementById('code').onclick=function(event){
   		event.target.src='./CodeServlet?id='+Math.random();
-  	}
+  	};
+  	var check_tel_flag=false;
+  	$('.tel_text').onchange=function(){
+  		var reg=/^[1][0-9]{10}$/g;
+  		if(reg.test(this.value)){
+  			$('.check_tel').innerHTML="ok";
+  			$('.check_tel').style="color:green";
+  			check_tel_flag=true;
+  		}else{
+  			$('.check_tel').innerHTML="ng";
+  			$('.check_tel').style="color:red";
+  			check_tel_flag=false;
+  		}
+  	};
+  	var check_code_flag=false;
+  	$('.i_code').onblur=function(){
+  		ajax({method:"post",url:"./CodeCheckServlet?i_code="+this.value},function(msg){
+  			if(msg.data=="success"){
+  				$('.check_code').innerHTML="ok";
+  	  			$('.check_code').style="color:green";
+  	  			check_code_flag=true;
+  			}else {
+  				$('.check_code').innerHTML="ng";
+  	  			$('.check_code').style="color:red";
+  	  			check_code_flag=false;
+  			}
+  		},function(msg){
+  			if(msg.status==500){
+  				$('.check_code').innerHTML="ng";
+  	  			$('.check_code').style="color:red";
+  	  			check_code_flag=false;
+  			}
+  		});
+  	};
   </script>
 </html>

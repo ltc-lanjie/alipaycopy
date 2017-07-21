@@ -283,7 +283,7 @@ ul,li{
 }
 .code_pic{
 	height:42px;
-	margin-left:8px;
+	margin-left:40px;
 	width:164px;
 	display:inline-block;
 	border:1px solid #ccc;
@@ -293,9 +293,7 @@ ul,li{
 	color:#08c;
 	
 }
-.code_pic{
 
-}
 .register_line4 a:hover{
 	text-decoration: underline;
 }

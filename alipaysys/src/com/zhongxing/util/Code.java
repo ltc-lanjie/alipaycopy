@@ -30,7 +30,7 @@ public class Code {
         graphics.setColor(getRandomColor(50));  
         graphics.setFont(font); 
         StringBuffer sb=new StringBuffer();
-        for(int i=1;i<7;i++){
+        for(int i=1;i<6;i++){
         	int index=(int)(Math.random()*32);
         	String content=String.valueOf(code.charAt(index));
         	sb.append(content);
@@ -45,6 +45,7 @@ public class Code {
 			e.printStackTrace();
 		} 
         image.flush();
+      
         return sb.toString();
 	}
 	

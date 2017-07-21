@@ -488,14 +488,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</div>
 		</div>
 	</body>
+	<script src="./js/myjs.js"></script>
 	<script type='text/javaScript'>
-	function $(obj){
-		var newObj=document.querySelectorAll(obj);
-		if(newObj.length==1){
-			return newObj[0];
-		}
-		return newObj;
-	}
 	//选择栏事件触发
 	$('.topselect').onmouseover=select;
 	$('.topselect').onmouseout=select;
