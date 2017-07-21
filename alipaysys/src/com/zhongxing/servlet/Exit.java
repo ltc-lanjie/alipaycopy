@@ -52,6 +52,7 @@ public class Exit extends HttpServlet {
 			throws ServletException, IOException {
 			HttpSession session =request.getSession();
 			session.removeAttribute("user");
+			session.invalidate();
 			response.sendRedirect("http://localhost/alipaysys/alipay/Login.jsp");
 	}
 

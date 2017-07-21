@@ -62,14 +62,22 @@ public class LoginCheckServlet extends HttpServlet {
 		String pwd=request.getParameter("pwd");
 		PwdCheck check=new PwdCheckImpl();
 		String url=check.loginCheck(name, pwd);
-		if(url.equals("alipay/Login.jsp")){
-			request.setAttribute("login", "该账户不存在或登录密码出错已达上限，请更换账户。"); 
-		}else{
-			HttpSession session=request.getSession();
-			session.setMaxInactiveInterval(5*60);
-			session.setAttribute("user", name);
+		String date1=request.getParameter("date");
+		HttpSession session=request.getSession();
+		String date2=(String) session.getAttribute("date");
+		if(date1==null||date2==null){
+			return;
 		}
-		RequestDispatcher rd=request.getRequestDispatcher("./"+url);
+		if(date1.equals(date2)){
+			if(url.equals("alipay/Login.jsp")){
+				request.setAttribute("login", "该账户不存在或登录密码出错已达上限，请更换账户。"); 
+			}else{
+				session.setMaxInactiveInterval(5*60);
+				session.setAttribute("user", name);
+			}
+		}
+		
+		RequestDispatcher rd=request.getRequestDispatcher("/"+url);
 		rd.forward(request, response);
 	}
 

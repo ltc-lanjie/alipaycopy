@@ -45,7 +45,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     						<span class='state'>你好，<%=session.getAttribute("user") %></span>
     					<%}else{ %>
     					<span class='state'>我已有支付宝账户</span>
-    					<a href='./alipay/Login.jsp'>快速登录</a>
+    					<a href='/alipaysys/alipay/Login.jsp'>快速登录</a>
     					<%}%>
     				</div>
     			</div>
@@ -69,7 +69,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    						<span class='center_font2'>我是口碑用户</span>
 	    					</div>
     					</a>
-    					<a href="./alipay/Personal.jsp">
+    					<a href="/alipaysys/alipay/Personal.jsp">
     						<div class='box3'>
 	    						<i class='center-logo3'></i>
 	    						<span class='center_font'>我是个人用户</span>

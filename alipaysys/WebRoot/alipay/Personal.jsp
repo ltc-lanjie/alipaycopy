@@ -52,6 +52,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				flag=false;
 			}
 		%>
+		
 		<div class='main'>
 						<!--固定样式-->
 					
@@ -99,7 +100,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<div class='top2'>
 						<div class="top2center">
 							<div class="top2right">
-								<a href="http://localhost/alipaysys" id='bluefont'>首页</a>
+								<a href="/alipaysys" id='bluefont'>首页</a>
 								<a href="#">财富中心</a>
 								<a href="#">安全保障</a>
 								<a>|</a>
@@ -112,13 +113,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								if(flag==false){
 							%>
 							<div class='hiddenbox'>
-								<div class='hiddenlogin'>登录</div>
-								<a href='http://localhost/alipaysys/alipay/Register.jsp'>
+								<a href='/alipaysys/alipay/Login.jsp'>
+									<div class='hiddenlogin'>登录</div>
+								</a>
+								<a href='/alipaysys/alipay/Register.jsp'>
 									<div class='hiddenregister'>注册</div>
 								</a>
 								<%}else{ %>
 								<div class='hiddenbox' style='visibility:visible;'>
-									<a>
+									<a href='#'>
 										<div class='login_box'>进入我的支付宝</div>
 									</a>	
 								<% } %>
@@ -182,7 +185,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								<!--登录框-->
 								<div class='logincenterline'>
 								
-									<form name="save" accept-charset='utf-8' action='http://localhost/alipaysys/LoginCheckServlet' method="post">
+									<form name="save" id='save' accept-charset='utf-8' action='/alipaysys/LoginCheckServlet' method="post">
 										
 										<div class="loginpage">
 											<div class="logintitle1">
@@ -200,6 +203,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												<!--密码-->
 												<div class="psw">
 													<input type="password" id="psw" name="pwd" class="pswinput" required>
+													<%
+														double date=Math.random();
+														session.setAttribute("date", String.valueOf(date)+"/");
+													%>
+													<input type='hidden' name='date' value=<%=String.valueOf(date) %>/>
 												</div>
 											</div>
 											<!--登录框底部-->
@@ -208,11 +216,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 													<a>
 											</div>
 											<div class="logincenter">
-												<input type="submit" value="登陆" class='signin'/>
+												<input type="submit" id='submit'  value="登陆" class='signin'/>
 												<div class="loginbotton">
-													<a href="http://localhost/alipaysys/alipay/Login.jsp">淘宝会员登录</a>
+													<a href="/alipaysys/alipay/Login.jsp">淘宝会员登录</a>
 													<a href="#">用户激活</a>
-													<a href="http://localhost/alipaysys/alipay/Register.jsp" style="color:#0be;float:right">免费注册</a>
+													<a href="/alipaysys/alipay/Register.jsp" style="color:#0be;float:right">免费注册</a>
 												</div>
 											</div>
 										</div>
@@ -249,7 +257,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						if(flag==false){
 					%>
 							<a href="#" class="box1">登录</a>
-							<a href="http://localhost/alipaysys/alipay/Register.jsp" class="box2">立即注册</a>
+							<a href="/alipaysys/alipay/Register.jsp" class="box2">立即注册</a>
 					<%
 						}
 					%>
@@ -263,7 +271,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<div class='bg1'></div>
 					<!--视频1-->
 					<video class="video" autoplay>
-						<source src="http://192.168.0.128/alipaysys/image/1.mp4" type="video/mp4" />
+						<source src="/alipaysys/image/1.mp4" type="video/mp4" />
 					</video>
 				</div>
 
@@ -456,8 +464,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 										<a href='#'>蚂蚁达客</a>
 									</div>
 									<div class='sevenline'>
-									
-										<a href='#' style='border-left:0px'>阿里巴巴集团</a>
+								<%
+							 
+								%>	
+										<a href='#' style'border-left:0px'>阿里巴巴集团</a>
 										<a href='#'>淘宝网</a>
 										<a href='#'>天猫</a>
 										<a href='#'>聚划算</a>
@@ -660,8 +670,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		
 	}
 	$('#exit').onclick=function(){
-		window.location.href='http://localhost/alipaysys/Exit';
+		window.location.href='/alipaysys/Exit';
 	}
+	$('#submit').onclick=function(event){
+		
+	}
+	
 	</script>
 		
 		

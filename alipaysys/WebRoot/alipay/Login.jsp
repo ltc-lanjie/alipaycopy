@@ -20,10 +20,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</head>
 	<%
    	if(session.getAttribute("user")!=null){
-   		RequestDispatcher rd= request.getRequestDispatcher("./Personal.jsp");
+   		RequestDispatcher rd= request.getRequestDispatcher("./portal.jsp");
    		rd.forward(request, response);
    	}
+	
    %>
+   <%
+		double date=Math.random();
+		session.setAttribute("date", String.valueOf(date)+"/");
+	%>
 	<body>
 		<div class='main'>
 			<div class='head'>
@@ -34,7 +39,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<div class='head_right'>
 						<ul>
 							<li>
-								<a href='./' target='_Blank'>支付宝首页</a>
+								<a href='/alipaysys/alipay/' target='_Blank'>支付宝首页</a>
 							</li>
 							<li>|
 							</li>
@@ -81,7 +86,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 							</div>
 							<div class='login_box2'>
-								<form method='post' accept-charset='utf-8' action='http://localhost/alipaysys/LoginCheckServlet' autocomplete="off">
+								<form method='post' accept-charset='utf-8' action='/alipaysys/LoginCheckServlet' autocomplete="off">
 								<%
    										if(request.getAttribute("login")!=null){
     											%>
@@ -91,6 +96,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	   									<% 
     									}
     							%>
+    							<input type='hidden' name='date' value=<%=String.valueOf(date) %>/>
 									<div class='user_box'>
 										<img alt="用户" src="./image/login_user_logo.png">
 										<input type='text' name='user' class='user' placeholder='邮箱/手机号/淘宝用户名' required>
@@ -104,8 +110,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									</div>
 									<input type='submit' value='登录' class='login_button'>
 									<div class='login_bottom' style='min-height:43px;'>
-										<a href='' class='taobao_login'>淘宝会员登录</a>
-										<a href='./alipay/Register.jsp' class='register'>免费注册</a>
+										<a href='/alipaysys/alipay/Login.jsp' class='taobao_login'>淘宝会员登录</a>
+										<a href='/alipaysys/alipay/Register.jsp' class='register'>免费注册</a>
 									</div>
 								</form>
 							</div>
