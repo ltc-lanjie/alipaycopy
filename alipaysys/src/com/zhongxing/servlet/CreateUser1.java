@@ -9,7 +9,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-public class CodeCheckServlet extends HttpServlet {
+import com.zhongxing.entity.Address;
+import com.zhongxing.entity.Loginstatus;
+import com.zhongxing.entity.User;
+
+public class CreateUser1 extends HttpServlet {
 
 	/**
 	 * The doGet method of the servlet. <br>
@@ -24,15 +28,28 @@ public class CodeCheckServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
-		response.setContentType("text/html charset=utf-8");
+		response.setContentType("text/html; charset=utf-8;");
 		PrintWriter out = response.getWriter();
-		String i_code=request.getParameter("i_code");
-		HttpSession session=request.getSession();
-		if(session.getAttribute("code")!=null){
-			if(i_code.equals(session.getAttribute("code"))){
-				out.print("success");
-			}else out.print("error"); //验证码错误
-		}else out.print("error1");//验证码超时
+		User user=new User();
+		Loginstatus loginstatus=new Loginstatus();
+		String tel = request.getParameter("tel");
+		String loginPwd = request.getParameter("loginPwd");
+		String payPwd = request.getParameter("payPwd");
+		String uname=new String(request.getParameter("uname").getBytes("iso-8859-1"),"utf-8");
+		String sex=new String(request.getParameter("sex").getBytes("iso-8859-1"),"utf-8");
+		String uidentity = request.getParameter("uidentity");
+		if(tel!=""&&loginPwd!=""&&payPwd!=""&&uname!=""&&sex!=""&&uidentity!=""){
+			user.setUtruename(uname);
+			user.setUsex(sex);
+			user.setUidentity(uidentity);
+			loginstatus.setUtelphone(tel);
+			loginstatus.setUloginpwd(loginPwd);
+			loginstatus.setUpaypwd(payPwd);
+			HttpSession session=request.getSession();
+			session.setAttribute("user", user);
+			session.setAttribute("loginstatus", loginstatus);
+			response.sendRedirect("./alipay/Register3.jsp");
+		}
 		out.flush();
 		out.close();
 	}

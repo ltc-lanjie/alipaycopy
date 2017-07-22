@@ -7,9 +7,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-public class CodeCheckServlet extends HttpServlet {
+public class CreateUser2 extends HttpServlet {
 
 	/**
 	 * The doGet method of the servlet. <br>
@@ -24,15 +23,16 @@ public class CodeCheckServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
-		response.setContentType("text/html charset=utf-8");
+		response.setContentType("text/html; charset='utf-8';");
+		response.setCharacterEncoding("utf-8");
 		PrintWriter out = response.getWriter();
-		String i_code=request.getParameter("i_code");
-		HttpSession session=request.getSession();
-		if(session.getAttribute("code")!=null){
-			if(i_code.equals(session.getAttribute("code"))){
-				out.print("success");
-			}else out.print("error"); //验证码错误
-		}else out.print("error1");//验证码超时
+		String card=request.getParameter("card");
+		String name=new String(request.getParameter("cname").getBytes("iso-8859-1"),"utf-8");
+		String cidentify=request.getParameter("cidentity");
+		String tel=request.getParameter("tel");
+		if(card!=""&&name!=""&&cidentify!=""&&tel!=""){
+			out.print("<script> alert('注册成功！');location.href='./alipay/Personal.jsp';</script>");
+		}
 		out.flush();
 		out.close();
 	}

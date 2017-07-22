@@ -106,14 +106,14 @@ body {
 					<strong class='strong_f1'>设置登录密码</strong> <label class='strong_f2'>登录时需验证，保护账户信息</label>
 				</div>
 				<div class='title_line2'>
-				<label class='pwd_text'>登录密码</label>
+					<label class='pwd_text'>登录密码</label>
 					<div class='title_line2_pwd'>
 						<input type='password' class='pwd1' required>
 					</div>
 					<p class="pwd1_check"></p>
 				</div>
 				<div class='title_line3'>
-				<label class='pwd_text'>再输入一次</label>
+					<label class='pwd_text'>再输入一次</label>
 					<div class='title_line2_pwd'>
 						<input type='password' class='pwd1' required>
 					</div>
@@ -124,14 +124,14 @@ body {
 					<strong class='strong_f1'>设置支付密码</strong> <label class='strong_f2'>交易付款或账户信息更改时需输入（不能与淘宝或支付宝登录密码相同）</label>
 				</div>
 				<div class='title_line2'>
-				<label class='pwd_text'>支付密码</label>
+					<label class='pwd_text'>支付密码</label>
 					<div class='title_line2_pwd'>
 						<input type='password' class='pwd1' required>
 					</div>
 					<p class="pwd1_check"></p>
 				</div>
 				<div class='title_line3'>
-				<label class='pwd_text'>再输入一次</label>
+					<label class='pwd_text'>再输入一次</label>
 					<div class='title_line2_pwd'>
 						<input type='password' class='pwd1' required>
 					</div>
@@ -142,14 +142,14 @@ body {
 					<strong class='strong_f1'>设置身份信息</strong> <label class='strong_f2'>请务必准确填写本人的身份信息，注册后不能更改，隐私信息未经本人许可严格保密</label>
 				</div>
 				<div class='title_line2'>
-				<label class='pwd_text'>真实姓名</label>
+					<label class='pwd_text'>真实姓名</label>
 					<div class='title_line2_pwd'>
 						<input type='text' class='pwd1' required>
 					</div>
 					<p class="pwd1_check"></p>
 				</div>
 				<div class='title_line2'>
-				<label class='pwd_text'>性别</label>
+					<label class='pwd_text'>性别</label>
 					<div class='title_line2_pwd'>
 						<input type='radio' name='sex' value='男'>男 <input
 							type='radio' name='sex' value='女'>女
@@ -157,24 +157,23 @@ body {
 					<p class="pwd1_check"></p>
 				</div>
 				<div class='title_line2'>
-				<label class='pwd_text'>身份证号码</label>
+					<label class='pwd_text'>身份证号码</label>
 					<div class='title_line2_pwd'>
 						<input type='text' class='pwd1' required>
 					</div>
 					<p class="pwd1_check"></p>
 				</div>
 				<div class='title_line2'>
-				<label class='pwd_text'>有效期</label>
+					<label class='pwd_text'>有效期</label>
 					<div class='title_line2_pwd'>
-						<input type='date' class='pwd1' value='2017-01-01' required>
-						<input type='checkbox'>长期
+						<input type='date' class='pwd1'  required>
+						<input type='checkbox' class="check_box1">长期
 					</div>
 					<p class="pwd1_check"></p>
 				</div>
 				<div class='title_line2'>
 					<div class='title_line2_pwd'>
-					<label class='pwd_text'>职业</label>
-						<select class='pwd1'>
+						<label class='pwd_text'>职业</label> <select class='pwd1'>
 							<option>- - - - - -请选择- - - - - -</option>
 							<option>党的机关、国家机关、群众团体和社会组</option>
 							<option>织、企事业单位负责人</option>
@@ -191,8 +190,7 @@ body {
 				</div>
 				<div class='title_line2'>
 					<div class='title_line2_pwd'>
-					<label class='pwd_text'>常用地址</label>
-						<select>
+						<label class='pwd_text'>常用地址</label> <select>
 							<option>请选择</option>
 						</select> <select>
 							<option>请选择</option>
@@ -204,7 +202,7 @@ body {
 				</div>
 				<div class='title_line2' style='height:93px;'>
 					<div class='title_line2_pwd' style='height:93px;'>
-						<div class='box_input'></div>
+						<textarea class='box_input'></textarea>
 					</div>
 					<p class="pwd1_check"></p>
 				</div>
@@ -221,61 +219,50 @@ body {
 <script type="text/javascript">
 	var pwd1_check_flag = false;
 	$('.pwd1')[0].onchange = function() {
-		if (/^[0-9a-zA-Z]{6,15}$/ig.test(this.value)) {
-			$('.pwd1_check')[0].innerHTML = "OK";
-			$('.pwd1_check')[0].style = "color:green";
-			pwd1_check_flag = true;
-		} else {
-			$('.pwd1_check')[0].innerHTML = "NG";
-			$('.pwd1_check')[0].style = "color:red";
-			pwd1_check_flag = false;
-		}
+		pwd1_check_flag = check_inputByReg($('.pwd1_check')[0],this.value,/^[0-9a-zA-Z]{6,15}$/);
 	};
 	var pwd1_check_flag1 = false;
-
 	$(".pwd1")[1].onchange = function() {
-		if (pwd1_check_flag) {
-			if (this.value == $('.pwd1')[0].value) {
-				$('.pwd1_check')[1].innerHTML = "OK";
-				$('.pwd1_check')[1].style = "color:green";
-				pwd1_check_flag1 = true;
-			} else {
-				$('.pwd1_check')[1].innerHTML = "NG";
-				$('.pwd1_check')[1].style = "color:red";
-				pwd1_check_flag1 = false;
-			}
-		}
+		pwd1_check_flag1=check_again($('.pwd1_check')[1],this.value,$('.pwd1')[0],pwd1_check_flag);
 	};
 	var pwd1_check_flag2 = false;
 	$('.pwd1')[2].onchange = function() {
-		if (/^[0-9a-zA-Z]{6,15}$/ig.test(this.value)) {
-			$('.pwd1_check')[2].innerHTML = "OK";
-			$('.pwd1_check')[2].style = "color:green";
-			pwd1_check_flag2 = true;
-		} else {
-			$('.pwd1_check')[2].innerHTML = "NG";
-			$('.pwd1_check')[2].style = "color:red";
-			pwd1_check_flag2 = false;
-		}
+		pwd1_check_flag2 = check_inputByReg($('.pwd1_check')[2],this.value,/^[0-9a-zA-Z]{6,15}$/);
 	};
 	var pwd1_check_flag3 = false;
-
 	$(".pwd1")[3].onblur = function() {
-		if (pwd1_check_flag2) {
-			if (this.value == $('.pwd1')[2].value) {
-				$('.pwd1_check')[3].innerHTML = "OK";
-				$('.pwd1_check')[3].style = "color:green";
-				pwd1_check_flag3 = true;
-			} else {
-				$('.pwd1_check')[3].innerHTML = "NG";
-				$('.pwd1_check')[3].style = "color:red";
-				pwd1_check_flag3 = false;
-			}
-		}
+		pwd1_check_flag3=check_again($('.pwd1_check')[3],this.value,$('.pwd1')[2],pwd1_check_flag2);
 	};
-	
-	$('.pwd1')[4].onblur=function(){
-		
+	var pwd1_check_flag4 = false;
+	$('.pwd1')[4].onblur = function(event) {
+		pwd1_check_flag4 = check_input($('.pwd1_check')[4],this.value,"");
+	};
+	var pwd1_check_flag5 = false;
+	$('.pwd1')[5].onblur=function(){
+		pwd1_check_flag5 = check_inputByReg($('.pwd1_check')[6],this.value,/^[0-9a-zA-Z]{17}[0-9xy]$/ig);
+	};
+	var pwd1_check_flag7 = false;
+	$('.pwd1')[7].onblur=function(){
+		pwd1_check_flag7=check_input($('.pwd1_check')[8],this.value,"- - - - - -请选择- - - - - -");
+	};
+	$('.register2_submit').onclick=function(){
+		if(pwd1_check_flag&&pwd1_check_flag1&&pwd1_check_flag2&&pwd1_check_flag3&&pwd1_check_flag4&&pwd1_check_flag5&&pwd1_check_flag7){
+			if(getRadioBoxValue('sex')!='undefined'){
+				if($('.pwd1')[6].value!=''||$('.check_box1').checked){
+					if($('.box_input').value!=''){
+						location.href="./CreateUser1?tel="+<%=request.getParameter("telphone")%>+
+										"&loginPwd="+$('.pwd1')[1].value+
+										"&payPwd="+$('.pwd1')[3].value+
+										"&uname="+$('.pwd1')[4].value+
+										"&sex="+getRadioBoxValue('sex')+
+										"&uidentity="+$('.pwd1')[5].value;
+					}
+					else alert('请输入常用地址');
+				}else alert('请填写正确的有效期');
+			}else alert('请输入性别');
+		}else{
+			alert('请完成信息填写');
+		}
 	};
 </script>
 </html>

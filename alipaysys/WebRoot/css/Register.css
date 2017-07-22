@@ -420,6 +420,7 @@ ul,li{
 	border:1px solid #ccc;
 	padding:2px;
 	margin-left:140px;
+	resize:none;
 }
 .register2_submit{
 	background:#f09512;
@@ -431,7 +432,7 @@ ul,li{
 	font-weight: bold;
 	letter-spacing:7px;
 	text-align:center;
-	border-rauius:2px;
+	border-radius:2px;
 	margin-left:220px;
 }
 .register2_picture{

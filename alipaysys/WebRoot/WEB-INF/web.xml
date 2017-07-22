@@ -24,6 +24,16 @@
 		<servlet-class>com.zhongxing.servlet.Exit</servlet-class>
 
 	</servlet>
+  <servlet>
+    <servlet-name>CreateUser1</servlet-name>
+    <servlet-class>com.zhongxing.servlet.CreateUser1</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CreateUser2</servlet-name>
+    <servlet-class>com.zhongxing.servlet.CreateUser2</servlet-class>
+  </servlet>
+
+
 
 
 
@@ -45,6 +55,14 @@
 		<url-pattern>/Exit</url-pattern>
 
 	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CreateUser1</servlet-name>
+    <url-pattern>/CreateUser1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CreateUser2</servlet-name>
+    <url-pattern>/CreateUser2</url-pattern>
+  </servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>Main.jsp</welcome-file>
 		<welcome-file>index.htm</welcome-file>
