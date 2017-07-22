@@ -1,52 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
-  <display-name>alipaysys</display-name>
-  <servlet>
-    <servlet-name>CodeServlet</servlet-name>
-   
-    <servlet-class>com.zhongxing.servlet.CodeServlet</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>LoginCheckServlet</servlet-name>
-    
-    <servlet-class>com.zhongxing.servlet.LoginCheckServlet</servlet-class>
-  </servlet>
-  <servlet>
-<<<<<<< HEAD
-    <servlet-name>CodeCheckServlet</servlet-name>
-    <servlet-class>com.zhongxing.servlet.CodeCheckServlet</servlet-class>
-=======
-    <servlet-name>Exit</servlet-name>
-    
-    <servlet-class>com.zhongxing.servlet.Exit</servlet-class>
->>>>>>> 0278cd6d9e5742ecb05b3ad55344efa8cd20c5fa
-  </servlet>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>alipaysys</display-name>
+	<servlet>
+		<servlet-name>CodeServlet</servlet-name>
+
+		<servlet-class>com.zhongxing.servlet.CodeServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>LoginCheckServlet</servlet-name>
+
+		<servlet-class>com.zhongxing.servlet.LoginCheckServlet</servlet-class>
+	</servlet>
+	<servlet>
+
+		<servlet-name>CodeCheckServlet</servlet-name>
+		<servlet-class>com.zhongxing.servlet.CodeCheckServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Exit</servlet-name>
+		<servlet-class>com.zhongxing.servlet.Exit</servlet-class>
+
+	</servlet>
 
 
 
-  <servlet-mapping>
-    <servlet-name>CodeServlet</servlet-name>
-    <url-pattern>/CodeServlet</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>LoginCheckServlet</servlet-name>
-    <url-pattern>/LoginCheckServlet</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-<<<<<<< HEAD
-    <servlet-name>CodeCheckServlet</servlet-name>
-    <url-pattern>/CodeCheckServlet</url-pattern>
-=======
-    <servlet-name>Exit</servlet-name>
-    <url-pattern>/Exit</url-pattern>
->>>>>>> 0278cd6d9e5742ecb05b3ad55344efa8cd20c5fa
-  </servlet-mapping>
-  <welcome-file-list>
-    <welcome-file>Main.jsp</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
-  </welcome-file-list>
+	<servlet-mapping>
+		<servlet-name>CodeServlet</servlet-name>
+		<url-pattern>/CodeServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoginCheckServlet</servlet-name>
+		<url-pattern>/LoginCheckServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+
+		<servlet-name>CodeCheckServlet</servlet-name>
+		<url-pattern>/CodeCheckServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Exit</servlet-name>
+		<url-pattern>/Exit</url-pattern>
+
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>Main.jsp</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
 </web-app>
