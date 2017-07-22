@@ -33,6 +33,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			display:inline;
 			font-size:20px;
 		}
+		
 	</style>
 	</head>
   
@@ -118,7 +119,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   						<p class="check_code"></p>
   					</div>
   					<div class='register_line4'>
-  						<input type='checkbox' class='check_box'>同意《
+  						<input type='checkbox' class='check_box' value="aa">同意《
   						<a href='#'>支付宝服务协议</a> 》
   					</div>
   					<div class='register_line5'>
@@ -209,5 +210,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   			}
   		});
   	};
+  	$('.submit_register1').onclick=function(){
+  		if(check_tel_flag==false){
+  			alert('请输入正确的手机号码');
+  		}else if(check_code_flag==false){
+  			alert('验证码有误！请重新输入。');
+  		}else if($('check_box').checked==false){
+  			alert('不同意协议是无法进行下一步的！');
+  		}else{
+  			location.href="./alipay/Register2.jsp?telphone="+$('.tel_text').value;
+  		}
+  	}
   </script>
 </html>

@@ -369,6 +369,7 @@ ul,li{
 	line-height:16px;
 	font-size:16px;
 	color:#f60;
+	margin-bottom:10px;
 }
 .title_line2{
 	height:52px;
@@ -390,8 +391,7 @@ ul,li{
     margin-left: 9px;
 }
 .title_line2_pwd{
-	width: 639px;
-	float:right;
+	float:left;
 	height:100%;
 	line-height:52px;
 }
@@ -405,17 +405,21 @@ ul,li{
     padding: 5px;
 }
 .pwd_text{
-	float:right;
+	width:72px;
+	float:left;
 	line-height:52px;
 	font-size: 14px;
+	margin-left:60px;
 	margin-right:10px;
 	color: #4c4c4c;
+	text-align:right;
 }
 .box_input{
 	height:64px;
 	width:184px;
 	border:1px solid #ccc;
 	padding:2px;
+	margin-left:140px;
 }
 .register2_submit{
 	background:#f09512;
@@ -428,6 +432,7 @@ ul,li{
 	letter-spacing:7px;
 	text-align:center;
 	border-rauius:2px;
+	margin-left:220px;
 }
 .register2_picture{
 	background-position: -17px -10px;
@@ -491,4 +496,9 @@ ul,li{
 	background: #f8f8f8;    
         line-height:21px;
     border:1px solid #e4e4e4;;
+}
+.pwd1_check{
+	position:relative;
+	display:inline-block;
+	margin-left:10px;
 }
