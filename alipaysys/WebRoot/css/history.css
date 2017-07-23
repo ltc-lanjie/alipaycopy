@@ -1,0 +1,231 @@
+.title_history{
+	width:990px;
+	position:relative;
+	display:block;
+	color: #4d4d4d;
+	height:22px;
+	margin:auto;
+	color:#08c;
+	margin-top: 15px;
+}
+.title_font_a{
+	float: left;
+    padding: 3px 0 0 8px;
+    color:#0088cc;
+	font-size: 13px;
+}
+.dustbin_logo_l{
+	background:url("/alipaysys/image/history_logo.png") no-repeat;
+	background-position: 0px -513px;
+}
+.dustbin_logo{
+	
+	height:14px;
+	width:50px;
+	float:right;
+	margin-top: 5px;
+	color:#08c;
+}
+.dustbin_logo span{
+	float:right;
+	font-size: 12px;
+	color:#08c;
+} 
+.title_font_right{
+	float:right;
+	font-size:12px;
+	margin-top: 5px;
+    margin-right: 5px;
+    color: #4d4d4d;
+}
+.title_font_right strong{
+	 color: #53a084;
+}
+.title_history a:hover,.title_history span:hover {
+	text-decoration:underline;
+}
+.form_body{
+	position:relative;
+	height:241px;
+	width:950px;
+	margin:0px auto;
+	padding:10px 20px;
+	border-top: 2px solid #b3cfee;
+	margin-top:5px;
+    border-bottom: 1px solid #cbdaea;
+}
+.form_line1,.form_line2,.form_line3,.form_line4,.form_line5{
+	width:100%;
+	position:relative;
+	height:28px;
+	padding-top:15px;
+}
+.form_line5{
+	padding-top:20px;
+	padding-left:80px;
+	height:31px;
+}
+.form_submit{
+	height:31px;
+	width:76.31px;
+	background:#f4a21d;
+	border-radius:3px;
+	border:1px solid #e67c00;
+	color: #fff;
+	letter-spacing:3px;
+    font-weight: bold;
+}
+.form_line_left,.form_line_right{
+	height:28px;
+	width:470px;
+	float:left;
+	position:relative;
+}
+.form_line_font,.form_line_input{
+	height:28px;
+	line-height:28px;
+	float:left;
+	position:relative;
+	color: #4d4d4d;
+}
+.form_line_font{
+	width:80px;
+	text-align:right;
+	font-weight: 700;
+	font-size: 13px;
+}
+.form_line_input{
+	width:375px;
+}
+.input_size{
+	height:28px;
+	background:#f5f5f5;
+	border:1px solid #ccc;
+	color: #4d4d4d;
+	padding-left:10px;
+}
+option{
+	background:#fff;
+	padding-top:5px;
+}
+.select_big_box{
+	height:35px;
+	width:990px;
+	position:relative;
+	border:1px solid #e5e5e5;
+	background:#f1f3f6;
+	margin:0px auto;	
+}
+.select_small_box,
+.select_small_box1{
+	height:35px;
+	position:relative;
+	float:left;
+	line-height:35px;
+	text-align:center;
+	cursor:pointer;
+	border-right:1px solid #e5e5e5;
+	display:inline-block;
+	color:#666;
+}
+.select_small_box:hover{
+	background:#FFF;
+}
+.select_small_box1{
+	cursor:context-menu;
+}
+.form_line_input input:hover{
+	border:1px solid #bbb;
+}
+.form_line_input select:hover{
+	border:1px solid #bbb;
+}
+.show_table{
+	position:relative;
+	margin:0px auto;
+	width:990px;
+}
+.show_tr{
+	width:100%;
+	height:auto;
+	position:relative;
+	
+}
+.show_td{
+	color:#9a9a9a;
+	font-size:12px;
+	word-break:break-all;
+	text-align:left;
+	height:auto;
+	border-bottom: 1px solid #e6e6e6;
+	padding: 10px 0;
+	vertical-align: top;
+}
+.no_history{
+	width:990px;
+	height:61px;
+	padding-top:40px;
+	padding-bottom:30px;
+	position:relative;
+	margin:0px auto;
+}
+.no_history_center{
+	width:420px;
+	height:100%;
+	position:relative;
+	margin:0px auto;
+	line-height:61px;
+	
+}
+.nothing_history{
+	font-family: "Microsoft YaHei","\9ED1\4F53";
+    display: inline;
+    height: 100%;
+    top: 11px;
+    position: absolute;
+    left: 137px;
+    font-size: 14px;
+    color: #666;
+}
+.history_bottom{
+	width:990px;
+	position:relative;
+	border-bottom: 1px solid #E6E6E6;
+    padding:  15px 0px;
+    margin:0px auto;
+}
+.history_bottom_center{
+	width:100%;
+	height:28px;
+	padding-top:10px;
+	font-size:12px;
+	color:#333;
+	
+}
+.history_bg{
+	margin-left:5px;
+	background:url("/alipaysys/image/history_logo.png") no-repeat;
+	height:14px; 
+	text-align:right;
+	display:inline-block;
+}
+.faq{
+	width:990px;
+	position:relative;
+	margin:0px auto;
+	height:229px;
+	padding-top:40px;
+}
+.faq_center{
+	width:950px;
+	position:relative;
+	padding:17px 20px 0px 20px;
+	height:200px;
+}
+.faq_line{
+	height:18px;
+	width:100%;
+	position:relative;
+	line-height:18px;
+	font-size:14px;
+}
