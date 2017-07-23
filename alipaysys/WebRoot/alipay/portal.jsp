@@ -199,7 +199,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 											<h3 style="font-size: 14px;font-weight: 200;">花呗</h3>
 										</div>
 										<div class="balance-body">
-											<div></div>
+											<div class="amount-des">
+												<p style="margin-bottom: 0;font-size: 14px;color: #a1a1a1 !important;">可用额度</p>
+												<span>
+													<strong style="font-size: 25px;">
+														xxxx<span class="fen" style="font-size: 18px;">.xx</span>
+													</strong>
+													元
+												</span>
+												<p style="font-size: 14px;color: #a1a1a1 !important;">总额度
+													xxxx<span class="fen">.xx</span>元
+												</p>
+											</div>
+										</div>
+										<input type="button" style="width: 48px;height: 22px;border-radius: 4px;" value="查看" />
+										<div class="balance-footer">
+											<p style="margin-bottom: 0;font-size: 14px;color: #a1a1a1 !important;">这月买，下月还</p>
 										</div>
 									</div>
 								</td>
@@ -209,8 +224,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 											<h3 style="font-size: 14px;font-weight: 200;">招财宝</h3>
 										</div>
 										<div class="balance-body">
-
+											<div class="amount-des">
+												<p style="margin-bottom: 0;font-size: 14px;color: #a1a1a1 !important;">今日主供产品年化收益率:</p>
+												<div class="rate" style="color: #FB7823;">
+													<p class="rate-start" style="font-size: 24px;float: left;margin-top: 0;margin-bottom: 0;">2.5%</p>
+													<p style="font-size: 24px;float: left;margin-top: 0;">-</p>
+													<p class="rate-end"   style="font-size: 24px;float: left;margin-top: 0;margin-bottom: 0;">4.0%</p>
+												</div>
+											</div>
 										</div>
+										<p style="margin-top: 0;font-size: 14px;color: #a1a1a1 !important;float: left;">灵活的定期理财</p>
+										<input type="button" style="width: 48px;height: 22px;border-radius: 4px;float: left;" value="查看" />
+										<span style="float: left;margin-left: 10px;color: #0088CC;text-decoration: underline;font-size: 12px;"><a >管理</a></span>
 									</div>
 								</td>
 								<td rowspan="2" class="balance-td">
@@ -219,12 +244,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 											<h3 style="font-size: 14px;font-weight: 200;">其他账户</h3>
 										</div>
 										<div class="balance-body">
-											
+											<div style="height: 20px;">
+												
+											</div>
 										</div>
 									</div>
 								</td>
 							</tr>
-
+							
 							<tr>
 								<td style="width: 50%;">
 									<div style="vertical-align: top;height: 103px;position: relative;">
@@ -252,7 +279,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 												<span style="color: #0088CC;margin-top: 15px;float: left;text-decoration: underline;cursor: pointer;margin-left: 9px;font-size: 14px;">更多理财</span>
 
 												<div class="assets-footer" style="background-image: url(./image/3UfjZtusGj.png);">
-
+													
 												</div>
 											</div>
 										</div>
