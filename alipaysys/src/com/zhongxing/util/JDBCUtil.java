@@ -17,7 +17,7 @@ public class JDBCUtil {
 			e.printStackTrace();
 		}
 		try {
-			conn=DriverManager.getConnection("jdbc:mysql://192.168.0.105:3307/"+database,user,password);
+			conn=DriverManager.getConnection("jdbc:mysql://192.168.0.99:3307/"+database,user,password);
 		} catch (SQLException e) {
 			System.out.println("加载Connection失败");
 			e.printStackTrace();

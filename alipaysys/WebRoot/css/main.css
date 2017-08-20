@@ -505,3 +505,14 @@ input:-webkit-autofill {
 	margin-bottom: 20px;
 	height: auto;
 }
+.login_fail{
+	  background: #fdeee9;
+    font-size: 12.5px;
+    margin-top: 15px;
+    padding-left: 10px;
+    font-weight: 100;
+    color: #4D4D4D;
+    line-height: 26px;
+}
+  
+
